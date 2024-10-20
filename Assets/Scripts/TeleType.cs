@@ -76,7 +76,6 @@ public class TeleType : MonoBehaviour
                 //Debug.Log("Done revealing the text.");
                 OnTeleTextComplete?.Invoke();
                 break;
-
             }
         }
 

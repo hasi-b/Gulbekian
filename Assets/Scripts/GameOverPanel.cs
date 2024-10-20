@@ -16,6 +16,7 @@ public class GameOverPanel : MonoBehaviour
     {
         continueButton.onClick.AddListener(() =>
         {
+            SoundManager.Instance.PlayUIButtonSound();
             SceneManagement.Instance.LoadScene(0);
         });
         continueButton.interactable = false;

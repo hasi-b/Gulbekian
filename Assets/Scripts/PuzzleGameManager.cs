@@ -10,7 +10,7 @@ public class PuzzleGameManager : MonoBehaviour
     [SerializeField]
     List<PuzzleDataContainer> PuzzleSourceData;
     [SerializeField]
-    int currentPuzzleCounter =0;
+    int currentPuzzleCounter = 0;
     [SerializeField]
     TextMeshProUGUI riddle;
     [SerializeField]
@@ -35,6 +35,8 @@ public class PuzzleGameManager : MonoBehaviour
     int narrativeCounter = 0;
     [SerializeField]
     float fadeDuration = 0.5f;
+
+    [SerializeField] GameOverPanel gameOverPanel;
     private void Start()
     {
         LoadData();
@@ -42,7 +44,7 @@ public class PuzzleGameManager : MonoBehaviour
 
     public void LoadData()
     {
-        if (currentPuzzleCounter<PuzzleSourceData.Count)
+        if (currentPuzzleCounter < PuzzleSourceData.Count)
         {
             image.sprite = PuzzleSourceData[currentPuzzleCounter].Sketch;
             fullScreenImage.sprite = PuzzleSourceData[currentPuzzleCounter].Sketch;
@@ -51,22 +53,22 @@ public class PuzzleGameManager : MonoBehaviour
         }
         else
         {
-
+            gameOverPanel.gameObject.SetActive(true);
         }
-    } 
+    }
 
     public void CheckValidity()
     {
-        
+
         Debug.Log(GPSLocationChecker.instance.IsPlayerWithinRadius(PuzzleSourceData[currentPuzzleCounter].location.x, PuzzleSourceData[currentPuzzleCounter].location.y, PuzzleSourceData[currentPuzzleCounter].radius));
-       if(0==0||DeviceCameraControl.Instance.CompareCapturedImage(PuzzleSourceData[currentPuzzleCounter].ReferenceImages)|| GPSLocationChecker.instance.IsPlayerWithinRadius(PuzzleSourceData[currentPuzzleCounter].location.x, PuzzleSourceData[currentPuzzleCounter].location.y, PuzzleSourceData[currentPuzzleCounter].radius))
+        if (0 == 0 || DeviceCameraControl.Instance.CompareCapturedImage(PuzzleSourceData[currentPuzzleCounter].ReferenceImages) || GPSLocationChecker.instance.IsPlayerWithinRadius(PuzzleSourceData[currentPuzzleCounter].location.x, PuzzleSourceData[currentPuzzleCounter].location.y, PuzzleSourceData[currentPuzzleCounter].radius))
         {
 
             //macthedvpopup
             //panel off
 
             successPanel.SetActive(true);
-            
+            SoundManager.Instance.PlaySuccessSound();
 
         }
         else
@@ -74,13 +76,13 @@ public class PuzzleGameManager : MonoBehaviour
             // didnt macth popup
             //panel off
             failurePanel.SetActive(true);
-
+            SoundManager.Instance.PlayFailureSound();
         }
 
 
 
 
-        
+
     }
 
     public void successButton()
@@ -88,13 +90,14 @@ public class PuzzleGameManager : MonoBehaviour
         successPanel.SetActive(false);
         narrativePanel.SetActive(true);
         DeviceCameraControl.Instance.submitButton.SetActive(false);
-        
+
         NarrativeFunction();
 
     }
 
 
-    public void failureButton() {
+    public void failureButton()
+    {
 
         failurePanel.SetActive(false);
         DeviceCameraControl.Instance.PuzzleNextLevel();
@@ -123,26 +126,26 @@ public class PuzzleGameManager : MonoBehaviour
     void NarrativeFunction()
     {
         NarrativeSlide();
-        
+
         if (narrativeCounter < narrativeImages.Count)
         {
-           
+
             narrativeButton.onClick.RemoveAllListeners();
             narrativeButton.onClick.AddListener(NarrativeSlide);
             Debug.Log("Hereee");
         }
 
-        
-        
+
+
     }
 
     void NarrativeSlide()
     {
-       
-            Sprite newSprite = TextureToSpriteConverter(narrativeImages[narrativeCounter]);
-            // Assign the sprite to the SpriteRenderer component
 
-            
+        Sprite newSprite = TextureToSpriteConverter(narrativeImages[narrativeCounter]);
+        // Assign the sprite to the SpriteRenderer component
+
+
         StartCoroutine(FadeOutAndIn(newSprite));
         narrativeCounter++;
 
@@ -153,7 +156,7 @@ public class PuzzleGameManager : MonoBehaviour
             narrativeButton.onClick.AddListener(LoadNextPuzzle);
         }
 
-        
+
     }
 
 
@@ -172,11 +175,11 @@ public class PuzzleGameManager : MonoBehaviour
     private IEnumerator FadeOutAndIn(Sprite newSprite)
     {
         // Fade out the current sprite
-        if (narrativeCounter!=0)
+        if (narrativeCounter != 0)
         {
             yield return StartCoroutine(FadeOut());
         }
-        
+
 
         // Change to the new sprite
         narrativeImageHolder.sprite = newSprite;
