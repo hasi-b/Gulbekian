@@ -14,6 +14,11 @@ public class PuzzleGameManager : MonoBehaviour
     TextMeshProUGUI riddle;
     [SerializeField]
     Image image;
+    [SerializeField]
+    Image fullScreenImage;
+    [SerializeField]
+    GameObject fullScreenPanel;
+   
     private void Start()
     {
         LoadData();
@@ -24,13 +29,16 @@ public class PuzzleGameManager : MonoBehaviour
         if (currentPuzzleCounter<PuzzleSourceData.Count)
         {
             image.sprite = PuzzleSourceData[currentPuzzleCounter].Sketch;
+            fullScreenImage.sprite = PuzzleSourceData[currentPuzzleCounter].Sketch;
             riddle.SetText(PuzzleSourceData[currentPuzzleCounter].riddle);
         }
     } 
 
     public void CheckValidity()
     {
-       if(DeviceCameraControl.Instance.CompareCapturedImage(PuzzleSourceData[currentPuzzleCounter].ReferenceImages))
+        
+        Debug.Log(GPSLocationChecker.instance.IsPlayerWithinRadius(PuzzleSourceData[currentPuzzleCounter].location.x, PuzzleSourceData[currentPuzzleCounter].location.y, PuzzleSourceData[currentPuzzleCounter].radius));
+       if(DeviceCameraControl.Instance.CompareCapturedImage(PuzzleSourceData[currentPuzzleCounter].ReferenceImages)|| GPSLocationChecker.instance.IsPlayerWithinRadius(PuzzleSourceData[currentPuzzleCounter].location.x, PuzzleSourceData[currentPuzzleCounter].location.y, PuzzleSourceData[currentPuzzleCounter].radius))
         {
             currentPuzzleCounter++;
             LoadData();
@@ -40,4 +48,13 @@ public class PuzzleGameManager : MonoBehaviour
         DeviceCameraControl.Instance.PuzzleNextLevel();
     }
 
+    public void TurnOnFullScreen()
+    {
+        fullScreenPanel.SetActive(true);
+    }
+
+    public void TurnOffFullScreen()
+    {
+        fullScreenPanel.SetActive(false);
+    }
 }

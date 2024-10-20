@@ -9,7 +9,7 @@ using System.Linq;
 public class DeviceCameraControl : MonoBehaviour
     {
     public static DeviceCameraControl Instance { get; private set; }
-        public Texture2D[] referenceImage;    // Reference image to compare against
+        //public Texture2D[] referenceImage;    // Reference image to compare against
         public RawImage cameraFeed;         // UI element to display the camera feed
         public TextMeshProUGUI  resultText;             // Text element to show comparison results
 
@@ -24,7 +24,8 @@ public class DeviceCameraControl : MonoBehaviour
         AspectRatioFitter aspectRatioFitter;
         [SerializeField]
         float threshold = 0.5f;
-
+    [SerializeField]
+    Texture2D dummyImg;
         [SerializeField]
         GameObject LinearCameraCapturebutton;
         [SerializeField]
@@ -65,7 +66,7 @@ public class DeviceCameraControl : MonoBehaviour
 
             if(Input.GetKeyDown(KeyCode.Space) && isCameraRunning)
         {
-            CaptureReferenceImage();
+            //CaptureReferenceImage();
             
         }
 
@@ -100,9 +101,10 @@ public class DeviceCameraControl : MonoBehaviour
         // Method to start the device camera
         public void StartCamera()
         {
+        cameraFeed.texture = null;
             if (WebCamTexture.devices.Length > 0)
             {
-                webCamTexture = new WebCamTexture(WebCamTexture.devices[0].name,Screen.width, Screen.height);
+                webCamTexture = new WebCamTexture(WebCamTexture.devices[0].name,1080, 1920);
                 cameraFeed.texture = webCamTexture;
                 webCamTexture.Play();
                 isCameraRunning = true;
@@ -124,26 +126,26 @@ public class DeviceCameraControl : MonoBehaviour
         threshold =float.Parse( inputText.text);
     }
         // Method to capture the current frame from the camera feed
-        public void CaptureReferenceImage()
-        {
-            if (webCamTexture != null && webCamTexture.isPlaying)
-            {
-            // Capture the current frame from the camera feed
-            referenceImage[0] = new Texture2D(webCamTexture.width, webCamTexture.height);
-            referenceImage[0].SetPixels(webCamTexture.GetPixels());
-                referenceImage[0].Apply();
-            resultText.SetText("Image captured!");
+        //public void CaptureReferenceImage()
+        //{
+        //    if (webCamTexture != null && webCamTexture.isPlaying)
+        //    {
+        //    // Capture the current frame from the camera feed
+        //    referenceImage[0] = new Texture2D(webCamTexture.width, webCamTexture.height);
+        //    referenceImage[0].SetPixels(webCamTexture.GetPixels());
+        //        referenceImage[0].Apply();
+        //    resultText.SetText("Image captured!");
            
-                Debug.Log("Image captured!");
-            StopCamera();
-        }
-            else
-            {
-                Debug.LogWarning("Camera is not running");
-            resultText.SetText("Camera is not running");
+        //        Debug.Log("Image captured!");
+        //    StopCamera();
+        //}
+        //    else
+        //    {
+        //        Debug.LogWarning("Camera is not running");
+        //    resultText.SetText("Camera is not running");
             
-            }
-        }
+        //    }
+        //}
 
     public void CaptureImage ()
     {
@@ -153,6 +155,7 @@ public class DeviceCameraControl : MonoBehaviour
             capturedImage = new Texture2D(webCamTexture.width, webCamTexture.height);
             capturedImage.SetPixels(webCamTexture.GetPixels());
             capturedImage.Apply();
+            cameraFeed.texture = capturedImage;
             resultText.SetText("Image captured!");
             StopCamera();
             Debug.Log("Image captured!");
@@ -177,6 +180,8 @@ public class DeviceCameraControl : MonoBehaviour
                 resultText.text = "No image captured yet";
                 return false;
             }
+
+           // capturedImage = dummyImg;
         for (int i = 0; i < referenceImages.Count; i++)
         {
             Texture2D resizedCapturedImage = ResizeTexture(capturedImage, referenceImages[i].width, referenceImages[i].height);
@@ -185,7 +190,7 @@ public class DeviceCameraControl : MonoBehaviour
             float ssimValue = CalculateSSIM(referenceImages[i], resizedCapturedImage);
             Debug.Log("value : " + ssimValue);
             // Display the result
-            if (ssimValue > threshold)
+            if (ssimValue >= threshold)
             {
                 isSame = true;
 

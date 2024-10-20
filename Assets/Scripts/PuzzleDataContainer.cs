@@ -12,4 +12,7 @@ public class PuzzleDataContainer : ScriptableObject
     public List<Texture2D> ReferenceImages;
     
     public int puzzleNumber;
+
+    public Vector2 location;
+    public float radius;
 }
