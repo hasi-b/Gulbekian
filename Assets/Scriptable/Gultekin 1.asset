@@ -14,19 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sketch: {fileID: 21300000, guid: ff4d10f4daa4df4448ecdc13e69387f9, type: 3}
   riddle: Gultekin
-  ReferenceImages:
-  - {fileID: 2800000, guid: 2e46a3c7a752f6549afa3f6ed8c643a2, type: 3}
-  - {fileID: 2800000, guid: dfa1b1dcbf0f33f48b1325257682b92e, type: 3}
-  - {fileID: 2800000, guid: 984f3421dcae1a4498a28ac71ceff62a, type: 3}
-  - {fileID: 2800000, guid: 3905f64c4252afe4a8e00a8fd4e6a768, type: 3}
-  - {fileID: 2800000, guid: 82b56cf51028dd24b830369c730622ac, type: 3}
-  - {fileID: 2800000, guid: 814505c7d4e24b24a803a5c06dc566eb, type: 3}
-  - {fileID: 2800000, guid: a8fe85934d800ba42a3fd6f4deac9f1d, type: 3}
-  - {fileID: 2800000, guid: fd9393abbc908ea468d507a042a326bd, type: 3}
-  - {fileID: 2800000, guid: 665ef60d4a863b14989c1bda440355da, type: 3}
-  - {fileID: 2800000, guid: ae89637ecb36d3946b86507efe17fba9, type: 3}
-  - {fileID: 2800000, guid: 8a629d6988eccc240860645f2e97c241, type: 3}
-  - {fileID: 2800000, guid: f74e9585cd1120c448f8b9774ae83026, type: 3}
+  ReferenceImages: []
+  NarrativeImages: []
   puzzleNumber: 1
   location: {x: 38.73735, y: -9.155888}
   radius: 5

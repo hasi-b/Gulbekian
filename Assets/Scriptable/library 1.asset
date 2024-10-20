@@ -15,13 +15,8 @@ MonoBehaviour:
   Sketch: {fileID: 21300000, guid: 3e0cc06ac952b6c4eb04aeae13396b2b, type: 3}
   riddle: ' Across the bridge, knowledge awaits, A view of the world that opens gates.
     Snap a moment, let the image unfold, Capture the wisdom, both new and old.'
-  ReferenceImages:
-  - {fileID: 2800000, guid: 18f0d8cf3d5458e428e9cbf177eba15c, type: 3}
-  - {fileID: 2800000, guid: ce30b7a0e1c1173479a5bf4bc1dfae62, type: 3}
-  - {fileID: 2800000, guid: c5faf7ce0e0e9ed4bbe1beb4d1749b88, type: 3}
-  - {fileID: 2800000, guid: a0d2c869d3dd0fe428ccad1980425984, type: 3}
-  - {fileID: 2800000, guid: 7e21f303d18ce954ca5d56b845ec696c, type: 3}
-  - {fileID: 2800000, guid: 138e7743ce6ff204da9bd06d7c49b325, type: 3}
+  ReferenceImages: []
+  NarrativeImages: []
   puzzleNumber: 2
   location: {x: 38.73793, y: -9.152749}
   radius: 5
