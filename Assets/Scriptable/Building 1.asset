@@ -15,18 +15,8 @@ MonoBehaviour:
   Sketch: {fileID: 21300000, guid: fadeea1faba50ab478f3a7219400f450, type: 3}
   riddle: Ducks wander on, their secret spells. A winding Tower, with no way in,
     This building stands, where tales begin.
-  ReferenceImages:
-  - {fileID: 2800000, guid: c20d0326cdd627641b5be52ab40c9088, type: 3}
-  - {fileID: 2800000, guid: ecd154496a4a7144dbc76d4b81127e37, type: 3}
-  - {fileID: 2800000, guid: dd28bc5c0ab60dc4890770a5424e9627, type: 3}
-  - {fileID: 2800000, guid: 2a44639bd21d7b74c8a0f3c18ef3a62b, type: 3}
-  - {fileID: 2800000, guid: 90b756f675b4afe46b58f54f734decda, type: 3}
-  - {fileID: 2800000, guid: f21fab7314d8b464e9116702953d38f4, type: 3}
-  - {fileID: 2800000, guid: 4f6a4924dae4bc24191802bd209d134f, type: 3}
-  - {fileID: 2800000, guid: d5a71c3dfda53bf4e9e39acbc27c45af, type: 3}
-  - {fileID: 2800000, guid: d3525117dd533184c8b67a7cba5673c7, type: 3}
-  - {fileID: 2800000, guid: 9a85ee278cf7f294bb24723abc14393d, type: 3}
-  - {fileID: 2800000, guid: a70502d31cf507c4a883c3bf37454552, type: 3}
+  ReferenceImages: []
+  NarrativeImages: []
   puzzleNumber: 4
   location: {x: 38.73854, y: -9.153488}
   radius: 10
