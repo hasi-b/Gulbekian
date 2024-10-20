@@ -3959,9 +3959,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PuzzleSourceData:
-  - {fileID: 11400000, guid: 1a8a93fef2c8f5e478a346ea6bfa8b01, type: 2}
-  - {fileID: 11400000, guid: 1df127616e0a0d44085ec59056bd46f0, type: 2}
   - {fileID: 11400000, guid: 8fcb18554a732a14ea240d2144b1a835, type: 2}
+  - {fileID: 11400000, guid: f5527e63e26847d4ba9d8a31e60a81f3, type: 2}
+  - {fileID: 11400000, guid: 1df127616e0a0d44085ec59056bd46f0, type: 2}
+  - {fileID: 11400000, guid: 1c4b71dfefe5b4e4aaebbf54cb368953, type: 2}
+  - {fileID: 11400000, guid: 1a8a93fef2c8f5e478a346ea6bfa8b01, type: 2}
   - {fileID: 11400000, guid: 19eb7dd38066ec14da9451aeb98ff89a, type: 2}
   currentPuzzleCounter: 0
   riddle: {fileID: 346125344}
@@ -3981,7 +3983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionRadius: 20
-  location: {fileID: 0}
+  location: {fileID: 1441921201}
   targetLatitude: 40.7128
   targetLongitude: -74.006
 --- !u!1 &1983814849

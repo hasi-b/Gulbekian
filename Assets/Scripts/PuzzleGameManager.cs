@@ -40,11 +40,26 @@ public class PuzzleGameManager : MonoBehaviour
         Debug.Log(GPSLocationChecker.instance.IsPlayerWithinRadius(PuzzleSourceData[currentPuzzleCounter].location.x, PuzzleSourceData[currentPuzzleCounter].location.y, PuzzleSourceData[currentPuzzleCounter].radius));
        if(DeviceCameraControl.Instance.CompareCapturedImage(PuzzleSourceData[currentPuzzleCounter].ReferenceImages)|| GPSLocationChecker.instance.IsPlayerWithinRadius(PuzzleSourceData[currentPuzzleCounter].location.x, PuzzleSourceData[currentPuzzleCounter].location.y, PuzzleSourceData[currentPuzzleCounter].radius))
         {
+
+            //macthedvpopup
+            //panel off
+
             currentPuzzleCounter++;
             LoadData();
             
 
         }
+        else
+        {
+            // didnt macth popup
+            //panel off
+
+
+        }
+
+
+
+
         DeviceCameraControl.Instance.PuzzleNextLevel();
     }
 

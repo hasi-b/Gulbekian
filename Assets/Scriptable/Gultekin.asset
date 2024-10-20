@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c949a68dd6824c8f0d0c23a51c5f5, type: 3}
   m_Name: Gultekin
   m_EditorClassIdentifier: 
-  Sketch: {fileID: 21300000, guid: ae89637ecb36d3946b86507efe17fba9, type: 3}
+  Sketch: {fileID: 21300000, guid: ff4d10f4daa4df4448ecdc13e69387f9, type: 3}
   riddle: Gultekin
   ReferenceImages:
   - {fileID: 2800000, guid: 2e46a3c7a752f6549afa3f6ed8c643a2, type: 3}
@@ -28,3 +28,5 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 8a629d6988eccc240860645f2e97c241, type: 3}
   - {fileID: 2800000, guid: f74e9585cd1120c448f8b9774ae83026, type: 3}
   puzzleNumber: 1
+  location: {x: 38.73735, y: -9.155888}
+  radius: 5

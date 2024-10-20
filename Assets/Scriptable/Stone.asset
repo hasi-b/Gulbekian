@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c3c949a68dd6824c8f0d0c23a51c5f5, type: 3}
-  m_Name: Pond
+  m_Name: Stone
   m_EditorClassIdentifier: 
-  Sketch: {fileID: 21300000, guid: 06dae27785395b94f9921927647f6afd, type: 3}
-  riddle: In fields of red, a pumpkin blue, A striking sight, a curious view. Beneath
-    the sky of endless hue, It waits in silence, just for you.
+  Sketch: {fileID: 21300000, guid: 72762c57c1a82c843b2888b82db221ed, type: 3}
+  riddle: An iron frame, with words at the base, An echo of wisdom in this empty
+    space. It holds the stories, yet feels so bare, A silent witness to knowledge
+    laid bare.
   ReferenceImages:
   - {fileID: 2800000, guid: 18f0d8cf3d5458e428e9cbf177eba15c, type: 3}
   - {fileID: 2800000, guid: ce30b7a0e1c1173479a5bf4bc1dfae62, type: 3}
@@ -23,3 +24,5 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 7e21f303d18ce954ca5d56b845ec696c, type: 3}
   - {fileID: 2800000, guid: 138e7743ce6ff204da9bd06d7c49b325, type: 3}
   puzzleNumber: 2
+  location: {x: 38.73695, y: -9.153377}
+  radius: 5
