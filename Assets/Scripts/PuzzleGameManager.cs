@@ -18,6 +18,12 @@ public class PuzzleGameManager : MonoBehaviour
     Image fullScreenImage;
     [SerializeField]
     GameObject fullScreenPanel;
+    [SerializeField]
+    GameObject successPanel;
+    [SerializeField]
+    GameObject failurePanel;
+    [SerializeField]
+    GameObject narrativePanel;
    
     private void Start()
     {
@@ -40,13 +46,51 @@ public class PuzzleGameManager : MonoBehaviour
         Debug.Log(GPSLocationChecker.instance.IsPlayerWithinRadius(PuzzleSourceData[currentPuzzleCounter].location.x, PuzzleSourceData[currentPuzzleCounter].location.y, PuzzleSourceData[currentPuzzleCounter].radius));
        if(DeviceCameraControl.Instance.CompareCapturedImage(PuzzleSourceData[currentPuzzleCounter].ReferenceImages)|| GPSLocationChecker.instance.IsPlayerWithinRadius(PuzzleSourceData[currentPuzzleCounter].location.x, PuzzleSourceData[currentPuzzleCounter].location.y, PuzzleSourceData[currentPuzzleCounter].radius))
         {
-            currentPuzzleCounter++;
-            LoadData();
+
+            //macthedvpopup
+            //panel off
+
+            successPanel.SetActive(true);
             
 
         }
+        else
+        {
+            // didnt macth popup
+            //panel off
+            failurePanel.SetActive(true);
+
+        }
+
+
+
+
+        
+    }
+
+    public void successButton()
+    {
+        successPanel.SetActive(false);
+        narrativePanel.SetActive(true);
+        DeviceCameraControl.Instance.submitButton.SetActive(false);
+
+    }
+
+
+    public void failureButton() {
+
+        failurePanel.SetActive(false);
         DeviceCameraControl.Instance.PuzzleNextLevel();
     }
+
+    public void LoadNextPuzzle()
+    {
+        narrativePanel.SetActive(false);
+        currentPuzzleCounter++;
+        LoadData();
+        DeviceCameraControl.Instance.PuzzleNextLevel();
+    }
+
 
     public void TurnOnFullScreen()
     {
