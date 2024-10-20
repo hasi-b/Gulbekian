@@ -33,6 +33,9 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 80a69b1ed564d234aa02251038b4ab6d, type: 3}
   - {fileID: 2800000, guid: 07c349dcd3032fe489543761674cf78f, type: 3}
   - {fileID: 2800000, guid: 1ddf635a114acee4e84c7f859540c2ca, type: 3}
+  NarrativeImages:
+  - {fileID: 2800000, guid: 7b0162e7e71e16b43add7440060049f3, type: 3}
+  - {fileID: 2800000, guid: a0d6403bbe1618846b523f631c2e204b, type: 3}
   puzzleNumber: 2
   location: {x: 38.73636, y: -9.153354}
   radius: 5
