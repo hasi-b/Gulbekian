@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3c949a68dd6824c8f0d0c23a51c5f5, type: 3}
+  m_Name: Lady 1
+  m_EditorClassIdentifier: 
+  Sketch: {fileID: 21300000, guid: 76e4d9ff214e538448ca1d3a43cad40c, type: 3}
+  riddle: A woman of beauty, a radiant grace, Yet stone-cold stillness marks her
+    face. Like Medusa's touch, her charm is bound, In a world of warmth, she's lost,
+    yet found.
+  ReferenceImages:
+  - {fileID: 2800000, guid: 983e0f4e719c4734892bb85e11acad74, type: 3}
+  - {fileID: 2800000, guid: 6d1123975b36ff44088cbaf2e7c3b48d, type: 3}
+  - {fileID: 2800000, guid: ed0be658cdde2f741af4b847771ae86b, type: 3}
+  - {fileID: 2800000, guid: dcd62cdcde8da35489739cdee9f2b2fb, type: 3}
+  - {fileID: 2800000, guid: a2cd71eda3fd8cf48a390f4197e5ebd2, type: 3}
+  - {fileID: 2800000, guid: da9e4aeedb290f743b35ad4ad4c6b04c, type: 3}
+  - {fileID: 2800000, guid: 5083ee2deb9bf544cb79a6866408018d, type: 3}
+  - {fileID: 2800000, guid: 2f15ca4aba0ee8845b40b2bd03dcb077, type: 3}
+  - {fileID: 2800000, guid: bd9787c9e46801d48b0b3eaba73c4645, type: 3}
+  puzzleNumber: 3
+  location: {x: 38.73681, y: -9.153061}
+  radius: 5

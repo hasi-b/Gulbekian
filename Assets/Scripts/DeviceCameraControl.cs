@@ -43,7 +43,7 @@ public class DeviceCameraControl : MonoBehaviour
     [SerializeField]
     GameObject captureButton;
     [SerializeField]
-    GameObject submitButton;
+    public GameObject submitButton;
 
     private void Awake()
     {

@@ -10,7 +10,7 @@ public class PuzzleDataContainer : ScriptableObject
     public Sprite Sketch;
     public string riddle;
     public List<Texture2D> ReferenceImages;
-    
+    public List<Texture2D> NarrativeImages;
     public int puzzleNumber;
 
     public Vector2 location;

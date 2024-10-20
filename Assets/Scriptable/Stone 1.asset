@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c3c949a68dd6824c8f0d0c23a51c5f5, type: 3}
-  m_Name: Stone
+  m_Name: Stone 1
   m_EditorClassIdentifier: 
   Sketch: {fileID: 21300000, guid: 13e672669b673594c8d426c8b7a0f68f, type: 3}
   riddle: An iron frame, with words at the base, An echo of wisdom in this empty
