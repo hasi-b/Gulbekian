@@ -17,7 +17,9 @@ MonoBehaviour:
     space. It holds the stories, yet feels so bare, A silent witness to knowledge
     laid bare.
   ReferenceImages: []
-  NarrativeImages: []
+  NarrativeImages:
+  - {fileID: 2800000, guid: 158311442610cb549843020f29230e5e, type: 3}
+  - {fileID: 2800000, guid: cbde847004f47464f9253abc650a4771, type: 3}
   puzzleNumber: 2
   location: {x: 38.73695, y: -9.153377}
   radius: 5

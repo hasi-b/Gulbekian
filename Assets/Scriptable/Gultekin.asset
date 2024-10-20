@@ -27,6 +27,11 @@ MonoBehaviour:
   - {fileID: 2800000, guid: ae89637ecb36d3946b86507efe17fba9, type: 3}
   - {fileID: 2800000, guid: 8a629d6988eccc240860645f2e97c241, type: 3}
   - {fileID: 2800000, guid: f74e9585cd1120c448f8b9774ae83026, type: 3}
+  NarrativeImages:
+  - {fileID: 2800000, guid: c9cf56b5e4024cb4ba5036496e015809, type: 3}
+  - {fileID: 2800000, guid: fd0b873cad70eec41b96ce819c9f4567, type: 3}
+  - {fileID: 2800000, guid: 8c59b54be325b6e4092d5a97ff5223a8, type: 3}
+  - {fileID: 2800000, guid: 8687f52308c9b834590b269afb764340, type: 3}
   puzzleNumber: 1
   location: {x: 38.73735, y: -9.155888}
   radius: 5
