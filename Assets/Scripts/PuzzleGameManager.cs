@@ -49,6 +49,10 @@ public class PuzzleGameManager : MonoBehaviour
             riddle.SetText(PuzzleSourceData[currentPuzzleCounter].riddle);
             narrativeImages = PuzzleSourceData[currentPuzzleCounter].NarrativeImages;
         }
+        else
+        {
+
+        }
     } 
 
     public void CheckValidity()
