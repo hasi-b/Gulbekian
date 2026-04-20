@@ -12,7 +12,7 @@ The project uses location tracking and image detection to anchor digital content
 
 ---
 
-## Research Focus
+## Design Question
 
 The project investigates how interaction can be distributed across physical space rather than contained within a device.
 
