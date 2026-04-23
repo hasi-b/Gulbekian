@@ -16,7 +16,9 @@ MonoBehaviour:
   riddle: In fields of red, a pumpkin blue, A striking sight, a curious view. Beneath
     the sky of endless hue, It waits in silence, just for you.
   ReferenceImages: []
-  NarrativeImages: []
+  NarrativeImages:
+  - {fileID: 2800000, guid: 7b0162e7e71e16b43add7440060049f3, type: 3}
+  - {fileID: 2800000, guid: a0d6403bbe1618846b523f631c2e204b, type: 3}
   puzzleNumber: 2
   location: {x: 38.73636, y: -9.153354}
   radius: 5

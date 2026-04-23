@@ -27,6 +27,9 @@ MonoBehaviour:
   - {fileID: 2800000, guid: d3525117dd533184c8b67a7cba5673c7, type: 3}
   - {fileID: 2800000, guid: 9a85ee278cf7f294bb24723abc14393d, type: 3}
   - {fileID: 2800000, guid: a70502d31cf507c4a883c3bf37454552, type: 3}
+  NarrativeImages:
+  - {fileID: 2800000, guid: a8855c346ead5eb41888222b180e40d0, type: 3}
+  - {fileID: 2800000, guid: 1075dfe55c44c62428fab0e2be87716c, type: 3}
   puzzleNumber: 4
   location: {x: 38.73854, y: -9.153488}
   radius: 10

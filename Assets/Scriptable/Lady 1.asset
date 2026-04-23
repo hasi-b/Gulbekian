@@ -17,7 +17,9 @@ MonoBehaviour:
     face. Like Medusa's touch, her charm is bound, In a world of warmth, she's lost,
     yet found.
   ReferenceImages: []
-  NarrativeImages: []
+  NarrativeImages:
+  - {fileID: 2800000, guid: d99c675f8a87b0549b6da6cc08214f51, type: 3}
+  - {fileID: 2800000, guid: 39e63f95dbd20074ca126ba7e3ea557e, type: 3}
   puzzleNumber: 3
   location: {x: 38.73681, y: -9.153061}
   radius: 5
